@@ -6,6 +6,7 @@
 package control.de.repuestos;
 
 import proyecto.internalframes.FrmListaRepuestos;
+import proyecto.internalframes.FrmModificarRepuesto;
 import proyecto.internalframes.FrmNuevoRepuesto;
 import proyecto.internalframes.FrmVender;
 
@@ -36,6 +37,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -83,6 +85,16 @@ public class FrmPrincipal extends javax.swing.JFrame {
         });
         jMenuBar1.add(jMenu3);
 
+        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/if_puzzle_pieces_2_2261325.png"))); // NOI18N
+        jMenu4.setText("Modificar informacion repuesto");
+        jMenu4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jMenu4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jMenu4MousePressed(evt);
+            }
+        });
+        jMenuBar1.add(jMenu4);
+
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -120,6 +132,12 @@ public class FrmPrincipal extends javax.swing.JFrame {
         dpnAdministracionRepuestos.add(vender);
         vender.show();
     }//GEN-LAST:event_jMenu3MousePressed
+
+    private void jMenu4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu4MousePressed
+        FrmModificarRepuesto modificar = new FrmModificarRepuesto();
+        dpnAdministracionRepuestos.add(modificar);
+        modificar.show();
+    }//GEN-LAST:event_jMenu4MousePressed
 
     /**
      * @param args the command line arguments
@@ -164,6 +182,7 @@ public class FrmPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
 }
