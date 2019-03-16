@@ -5,6 +5,8 @@
  */
 package proyecto.internalframes;
 
+import control.de.repuestos.FrmPrincipal;
+
 /**
  *
  * @author Kevin
@@ -50,6 +52,23 @@ public class FrmModificarRepuesto extends javax.swing.JInternalFrame {
         setResizable(true);
         setTitle("Modificar informacion repuesto");
         setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/if_puzzle_pieces_2_2261325.png"))); // NOI18N
+        addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+                formInternalFrameClosing(evt);
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/if_stack_1287510.png"))); // NOI18N
@@ -224,6 +243,12 @@ public class FrmModificarRepuesto extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formInternalFrameClosing(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosing
+        
+        FrmPrincipal.frModificar=null;
+        
+    }//GEN-LAST:event_formInternalFrameClosing
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

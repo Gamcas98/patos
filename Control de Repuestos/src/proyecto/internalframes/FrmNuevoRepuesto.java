@@ -5,6 +5,8 @@
  */
 package proyecto.internalframes;
 
+import control.de.repuestos.FrmPrincipal;
+
 /**
  *
  * @author Kevin
@@ -45,6 +47,23 @@ public class FrmNuevoRepuesto extends javax.swing.JInternalFrame {
         setIconifiable(true);
         setTitle("Agregar repuesto");
         setFrameIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/if_sign-add_299068 (1).png"))); // NOI18N
+        addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+                formInternalFrameClosing(evt);
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/if_Add_create_new_more_plus_1886085.png"))); // NOI18N
@@ -165,6 +184,12 @@ public class FrmNuevoRepuesto extends javax.swing.JInternalFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formInternalFrameClosing(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosing
+        
+        FrmPrincipal.frNuevo=null;
+        
+    }//GEN-LAST:event_formInternalFrameClosing
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

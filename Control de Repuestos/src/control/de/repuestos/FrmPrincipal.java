@@ -16,6 +16,11 @@ import proyecto.internalframes.FrmVender;
  */
 public class FrmPrincipal extends javax.swing.JFrame {
 
+    public static FrmListaRepuestos frLista;
+    public static FrmModificarRepuesto frModificar;
+    public static FrmNuevoRepuesto frNuevo;
+    public static FrmVender frVender;
+
     /**
      * Creates new form FramePrincipal
      */
@@ -116,27 +121,35 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenu1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MousePressed
-        FrmListaRepuestos lista = new FrmListaRepuestos();
-        dpnAdministracionRepuestos.add(lista);
-        lista.show();
+        if (frLista == null) {
+            frLista = new FrmListaRepuestos();
+            dpnAdministracionRepuestos.add(frLista);
+            frLista.show();
+        }
     }//GEN-LAST:event_jMenu1MousePressed
 
     private void jMenu2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MousePressed
-        FrmNuevoRepuesto repuesto = new FrmNuevoRepuesto();
-        dpnAdministracionRepuestos.add(repuesto);
-        repuesto.show();
+        if (frNuevo == null) {
+            frNuevo = new FrmNuevoRepuesto();
+            dpnAdministracionRepuestos.add(frNuevo);
+            frNuevo.show();
+        }
     }//GEN-LAST:event_jMenu2MousePressed
 
     private void jMenu3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MousePressed
-        FrmVender vender = new FrmVender();
-        dpnAdministracionRepuestos.add(vender);
-        vender.show();
+        if (frVender == null) {
+            frVender = new FrmVender();
+            dpnAdministracionRepuestos.add(frVender);
+            frVender.show();
+        }
     }//GEN-LAST:event_jMenu3MousePressed
 
     private void jMenu4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu4MousePressed
-        FrmModificarRepuesto modificar = new FrmModificarRepuesto();
-        dpnAdministracionRepuestos.add(modificar);
-        modificar.show();
+        if (frModificar == null) {
+             frModificar = new FrmModificarRepuesto();
+            dpnAdministracionRepuestos.add(frModificar);
+            frModificar.show();
+        }
     }//GEN-LAST:event_jMenu4MousePressed
 
     /**
